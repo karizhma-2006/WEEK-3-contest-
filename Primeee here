@@ -1,0 +1,28 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    int n,cnt=1,flag;
+    cin>>n;
+    for(int i=3;i<=n;i++)
+    {
+        flag=1;
+        for(int j=2;j<i;j++)
+        {
+        if(i%j==0)
+        {
+            flag=0;
+        }
+        }
+        if(flag==1)
+        {
+            cnt++;
+        }
+    }
+    cout<<cnt;
+    return 0;
+}
